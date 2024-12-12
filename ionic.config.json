@@ -1,0 +1,7 @@
+{
+  "name": "appTonato",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
