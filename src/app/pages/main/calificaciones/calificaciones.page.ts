@@ -9,6 +9,7 @@ import { AcademicService } from 'src/app/services/academic.service';
 export class CalificacionesPage implements OnInit {
   subjects: any[] = []; // Almacena las materias desde Firebase
   selectedSubject: any = null; // Materia seleccionada
+  matriculaStatus: string = ''; // Estado de matrícula
 
   constructor(private academicService: AcademicService) {}
 
@@ -30,6 +31,7 @@ export class CalificacionesPage implements OnInit {
 
   // Manejar selección de materia
   onSubjectChange() {
-    // No es necesario realizar una lógica adicional ya que la materia seleccionada está en `selectedSubject`
+    // Verificar si el estado de matrícula está disponible para la materia seleccionada
+    this.matriculaStatus = this.selectedSubject.matricula ? 'Matriculado' : 'No Matriculado';
   }
 }

@@ -21,17 +21,21 @@
       </ion-card-header>
       <ion-card-content>
         <table>
-          <tr class="spacing">
+          <tr>
             <th>Nombre</th>
             <td>{{ selectedSubject.nombre }}</td>
           </tr>
-          <tr class="spacing">
+          <tr>
             <th>Profesor</th>
             <td>{{ selectedSubject.profesro }}</td>
           </tr>
           <tr class="spacing">
             <th>Calificación</th>
             <td>{{ selectedSubject.Calificacion }}</td>
+          </tr>
+          <tr class="spacing">
+            <th>Estado de Matrícula</th>
+            <td>{{ matriculaStatus }}</td>
           </tr>
         </table>
       </ion-card-content>
