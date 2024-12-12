@@ -1,13 +1,27 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>main</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Sistema De Educacion Universitaria</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">main</ion-title>
+<ion-content id="main-content">
+  <ion-router-outlet></ion-router-outlet>
+</ion-content>
+
+<ion-menu side="start" menuId="main-menu" contentId="main-content">
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>Menú</ion-title>
     </ion-toolbar>
   </ion-header>
-</ion-content>
+  <ion-content>
+    <ion-list>
+      <ion-item routerLink="/home">Inicio</ion-item>
+      <ion-item routerLink="/profile">Calificaciones</ion-item>
+      <ion-item routerLink="/settings">Tareas</ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>

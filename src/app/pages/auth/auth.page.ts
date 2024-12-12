@@ -39,7 +39,6 @@ export class AuthPage implements OnInit {
           buttons: ['OK']
         });
         await alert.present();
-
         this.router.navigateByUrl('/main');
       }).catch(async (err) => {
         console.log(err);
@@ -49,6 +48,7 @@ export class AuthPage implements OnInit {
           buttons: ['OK']
         })
         await alert.present();
+        this.loginForm.reset();
       });
 
 
